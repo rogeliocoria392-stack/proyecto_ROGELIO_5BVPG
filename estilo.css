@@ -1,0 +1,186 @@
+/* ==========================================================================
+   HOJA DE ESTILOS GENERAL - PROYECTO PAEC
+   Paleta de colores (Máximo 4 colores cálidos y amigables):
+   1. Fondo principal: #F9F6F0 (Crema / Calidez)
+   2. Color primario: #4A7C59 (Verde suave / Bienestar animal)
+   3. Color secundario: #D97736 (Naranja cálido / Acento)
+   4. Texto y contraste: #2C3E50 (Azul oscuro / Lectura legible)
+   ========================================================================== */
+
+/* Reseteo básico y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #F9F6F0;
+    color: #2C3E50;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #4A7C59;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: #D97736;
+}
+
+/* Contenido Principal */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+}
+
+/* Banner / Sección Hero */
+.hero {
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border-left: 6px solid #D97736;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.hero h2 {
+    color: #4A7C59;
+    margin-bottom: 1rem;
+}
+
+/* Sección de Tarjetas e Información */
+.info-section {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.info-section h2, .info-section h3 {
+    color: #4A7C59;
+    margin-bottom: 1rem;
+}
+
+/* Galería de Adopciones (Grid responsivo) */
+.galeria-adopcion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.tarjeta-animal {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.tarjeta-animal:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-animal img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.tarjeta-info {
+    padding: 1.2rem;
+}
+
+.tarjeta-info h3 {
+    color: #D97736;
+    margin-bottom: 0.5rem;
+}
+
+.btn-adoptar {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #4A7C59;
+    color: #FFFFFF;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-adoptar:hover {
+    background-color: #3b6347;
+}
+
+/* Secciones de Donaciones */
+.donaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.lista-necesidades ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.centro-acopio {
+    background-color: #F9F6F0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+}
+
+/* Pie de Página */
+footer {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
